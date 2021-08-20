@@ -1,26 +1,38 @@
-.tab li {
-  width: 33.33%;
-  height: 96px;
-  line-height: 96px;
-  border: 1px solid #dcdcdc;
-  text-align: center;
-  font-weight: 500;
-  font-size: 32px;
-  &:hover {
-    border-bottom: 8px solid $secondary;
+.tab {
+  .tab__title {
+    width: 33.33%;
+    border: 1px solid #dcdcdc;
+    text-align: center;
+    font-weight: 500;
+    font-size: 32px;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0;
+    &:hover {
+      border-bottom: 8px solid $secondary;
+      @include phone {
+        border-bottom: 4px solid $secondary;
+      }
+    }
+    @include pad {
+      padding: 14px 0;
+      font-size: 24px;
+    }
     @include phone {
-      border-bottom: 4px solid $secondary;
+      padding: 6px 0;
+      font-size: 14px;
     }
   }
-  @include pad {
-    font-size: 24px;
-    height: 60px;
-    line-height: 60px;
-  }
-  @include phone {
-    font-size: 14px;
-    height: 30px;
-    line-height: 30px;
+  .tab__icon {
+    font-size: 48px;
+    margin-right: 8px;
+    @include pad {
+      font-size: 32px;
+    }
+    @include phone {
+      font-size: 16px;
+      margin-right: 2px;
+    }
   }
 }
 
@@ -32,14 +44,29 @@
   @include phone {
     margin-bottom: 32px;
   }
-  .ad__image {
-    width: 50%;
-    img {
-      object-fit: cover;
-      height: 304px;
-      width: 100%;
-      @include phone {
-        height: 148px;
+  .ad__banner {
+    height: 304px;
+    width: 100%;
+    @include phone {
+      height: 148px;
+    }
+    li {
+      width: 50%;
+      &:nth-child(1) {
+        background-image: url("../../assets/images/banner-1.png");
+        background-position: center;
+        background-size: cover;
+        @include pad {
+          background-image: url("../../assets/images/banner-1-768.png");
+        }
+      }
+      &:nth-child(2) {
+        background-image: url("../../assets/images/banner-2.png");
+        background-position: center;
+        background-size: cover;
+        @include pad {
+          background-image: url("../../assets/images/banner-2-768.png");
+        }
       }
     }
   }
@@ -126,4 +153,48 @@
   &:nth-child(2) {
     background-color: #b75929;
   }
+}
+
+.product__pagination {
+  text-align: center;
+  margin-bottom: 160px;
+  @include pad {
+    margin-bottom: 96px;
+  }
+  @include phone {
+    margin-top: 8px;
+    margin-bottom: 56px;
+  }
+}
+.pagination {
+  display: inline-block;
+}
+.pagination a {
+  font-size: 18px;
+  color: #555555;
+  float: left;
+  padding: 12px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #555555;
+  &.button {
+    padding: 12px 12px;
+    @include phone {
+      padding: 12px 10px;
+    }
+  }
+  @include phone {
+    font-size: 16px;
+    padding: 12px 14px;
+  }
+}
+
+.pagination a.active {
+  background-color: #000000;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #000000;
+  color: white;
 }
