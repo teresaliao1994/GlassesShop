@@ -1,0 +1,129 @@
+.tab li {
+  width: 33.33%;
+  height: 96px;
+  line-height: 96px;
+  border: 1px solid #dcdcdc;
+  text-align: center;
+  font-weight: 500;
+  font-size: 32px;
+  &:hover {
+    border-bottom: 8px solid $secondary;
+    @include phone {
+      border-bottom: 4px solid $secondary;
+    }
+  }
+  @include pad {
+    font-size: 24px;
+    height: 60px;
+    line-height: 60px;
+  }
+  @include phone {
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+
+.ad {
+  margin-bottom: 80px;
+  @include pad {
+    margin-bottom: 56px;
+  }
+  @include phone {
+    margin-bottom: 32px;
+  }
+  .ad__image {
+    width: 50%;
+    img {
+      object-fit: cover;
+      height: 304px;
+      width: 100%;
+      @include phone {
+        height: 148px;
+      }
+    }
+  }
+}
+
+.product__title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  @include pad {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+  @include phone {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .english {
+    font-size: 42px;
+    @include pad {
+      font-size: 32px;
+    }
+    @include phone {
+      font-size: 20px;
+    }
+  }
+}
+.english {
+  font-size: 42px;
+  font-weight: 500;
+  font-size: 32px;
+  font-size: 20px;
+}
+.product__list {
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 24px;
+  @include phone {
+    font-size: 16px;
+  }
+  .product__item {
+    margin-bottom: 104px;
+    width: 22.97%;
+    @include pad {
+      margin-bottom: 72px;
+      width: 47.82%;
+    }
+    @include phone {
+      margin-bottom: 32px;
+      width: 100%;
+    }
+    img {
+      height: 164px;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+  .product__text {
+    display: flex;
+    justify-content: space-between;
+  }
+  .price {
+    font-weight: 500;
+  }
+}
+
+.color {
+  display: flex;
+}
+.color li {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  @include phone {
+    width: 16px;
+    height: 16px;
+  }
+  &:nth-child(1) {
+    background-color: #5f3e2d;
+    margin-right: 8px;
+  }
+  &:nth-child(2) {
+    background-color: #b75929;
+  }
+}
